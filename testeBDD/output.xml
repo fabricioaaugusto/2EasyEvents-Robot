@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.8.0 on win32)" generated="20220814 18:55:33.839" rpa="false" schemaversion="3">
+<suite id="s1" name="TestCasesBDD2Easy" source="C:\Users\FABRICIO\Documents\2EasyEvents-Robot\testeBDD\TestCasesBDD2Easy.robot">
+<test id="s1-t1" name="Cenário 01: Verificar o titulo do Site 2EasyEvents" line="12">
+<kw name="Dado que esteja na tela Home site 2EasyEvents" library="BDDpt-br" sourcename="Dado ${keyword}">
+<kw name="Run Keyword" library="BuiltIn">
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Que esteja na tela Home site 2EasyEvents" library="ResourceBDD">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL1}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220814 18:55:33.971" level="INFO">Opening browser 'chrome' to base url 'https://easyevents-v2.herokuapp.com/'.</msg>
+<status status="PASS" starttime="20220814 18:55:33.970" endtime="20220814 18:55:36.326"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CABEÇALHO1}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220814 18:55:36.326" endtime="20220814 18:55:36.339"/>
+</kw>
+<status status="PASS" starttime="20220814 18:55:33.970" endtime="20220814 18:55:36.339"/>
+</kw>
+<status status="PASS" starttime="20220814 18:55:33.970" endtime="20220814 18:55:36.339"/>
+</kw>
+<status status="PASS" starttime="20220814 18:55:33.970" endtime="20220814 18:55:36.339"/>
+</kw>
+<kw name="Quando clico no menu contato para enviar uma mensagem" library="BDDpt-br" sourcename="Quando ${keyword}">
+<kw name="Run Keyword" library="BuiltIn">
+<arg>${keyword}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Clico no menu Contato para enviar uma mensagem" library="ResourceBDD">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CAMPO_CONTATO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20220814 18:55:41.556" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220814 18:55:41.557" level="FAIL">Element 'xpath=.//*[@id="navbarResponsive"]/ul[1]/li[3]/a' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20220814 18:55:36.340" endtime="20220814 18:55:41.558"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CAMPO_CONTATO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220814 18:55:41.558" endtime="20220814 18:55:41.558"/>
+</kw>
+<status status="FAIL" starttime="20220814 18:55:36.340" endtime="20220814 18:55:41.558"/>
+</kw>
+<status status="FAIL" starttime="20220814 18:55:36.339" endtime="20220814 18:55:41.558"/>
+</kw>
+<status status="FAIL" starttime="20220814 18:55:36.339" endtime="20220814 18:55:41.559"/>
+</kw>
+<status status="FAIL" starttime="20220814 18:55:33.969" endtime="20220814 18:55:41.559">Element 'xpath=.//*[@id="navbarResponsive"]/ul[1]/li[3]/a' not visible after 5 seconds.</status>
+</test>
+<kw name="Fechar Navegador" type="TEARDOWN">
+<msg timestamp="20220814 18:55:41.562" level="FAIL">No keyword with name 'Fechar Navegador' found.</msg>
+<status status="FAIL" starttime="20220814 18:55:41.562" endtime="20220814 18:55:41.562">No keyword with name 'Fechar Navegador' found.</status>
+</kw>
+<status status="FAIL" starttime="20220814 18:55:33.840" endtime="20220814 18:55:41.562">Suite teardown failed:
+No keyword with name 'Fechar Navegador' found.</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="TestCasesBDD2Easy">TestCasesBDD2Easy</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

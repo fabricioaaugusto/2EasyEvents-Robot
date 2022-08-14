@@ -11,7 +11,7 @@ Suite Teardown   Fechar Navegador
 
 Cenário 01: Verificar o titulo do Site 2EasyEvents
     Dado que esteja na tela Home site 2EasyEvents
-    #Quando pesquisar pela palavra "introdução ao robot framework"
+    Quando clico no menu contato para enviar uma mensagem
     #Então a postagem "Season Premiere: Introdução ao Robot Framework" deve ser listada no resultado da pesquisa
 
 

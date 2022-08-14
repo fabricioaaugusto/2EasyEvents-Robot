@@ -7,6 +7,8 @@ ${URL}                  https://robotizandotestes.blogspot.com.br/
 ${URL1}                 https://easyevents-v2.herokuapp.com/
 ${CABEÇALHO}            id=Header1
 ${CABEÇALHO1}           xpath=.//*[@id="mainNav"]/div/a
+${CAMPO_MENU}           id=navbar-toggler
+${CAMPO_CONTATO}        xpath=.//*[@id="navbarResponsive"]/ul[1]/li[3]/a
 ${BOTAO_LUPA}           css=.search-expand.touch-icon-button
 ${CAMPO_PESQUISAR}      css=.search-input>input
 ${BOTAO_PESQUISAR}      css=.search-action.flat-button
@@ -26,7 +28,6 @@ Que esteja na tela de resultado da pesquisa pela postagem "${TITULO_POSTAGEM}"
 Que esteja na tela Home site 2EasyEvents
     Open Browser   ${URL1}  ${BROWSER}
     Wait Until Element Is Visible   ${CABEÇALHO1}
-    Title Should Be     Easy-Events
 
 #### QUANDO
 Pesquisar pela palavra "${BUSCA}"
@@ -35,6 +36,12 @@ Pesquisar pela palavra "${BUSCA}"
     Sleep  2s
     Click Element   ${BOTAO_PESQUISAR}
     Wait Until Element Is Visible   ${LINK_POST}
+
+Clico no menu Contato para enviar uma mensagem
+    Wait Until Element Is Visible   ${CAMPO_CONTATO}
+    Click Element   ${CAMPO_CONTATO}
+    #Sleep  1s
+    #Click Element   ${CAMPO_MENU}
 
 Clicar no link da postagem
     Click Element    ${LINK_POST}
@@ -49,6 +56,8 @@ A tela da postagem "${TITULO_POSTAGEM}" deve ser mostrada
     Title Should Be  ${TITULO_POSTAGEM}
     Sleep   2s
 
+#### E
+
 #### TEARDOWN
-Fechar Navegador
-    Close Browser
+#Fechar Navegador
+#    Close Browser
