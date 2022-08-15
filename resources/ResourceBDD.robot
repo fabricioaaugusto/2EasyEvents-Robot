@@ -6,9 +6,16 @@ ${BROWSER}              chrome
 ${URL}                  https://robotizandotestes.blogspot.com.br/
 ${URL1}                 https://easyevents-v2.herokuapp.com/
 ${CABEÇALHO}            id=Header1
-${CABEÇALHO1}           xpath=.//*[@id="mainNav"]/div/a
-${CAMPO_MENU}           id=navbar-toggler
-${CAMPO_CONTATO}        xpath=.//*[@id="navbarResponsive"]/ul[1]/li[3]/a
+${CABEÇALHO1}           xpath=./html/body/nav/div/button
+
+
+${CAMPO_MENU}           xpath=./html/body/nav/div/button
+${CAMPO_CONTATO}        xpath=./html/body/nav/div/div/ul[1]/li[3]/a
+${CAMPO_NAME}           id=id_nome
+${CAMPO_EMAIL}          id=id_email
+${CAMPO_ASSUNTO}        id=id_assunto
+${CAMPO_MENSAGEM}       id=id_mensagem
+
 ${BOTAO_LUPA}           css=.search-expand.touch-icon-button
 ${CAMPO_PESQUISAR}      css=.search-input>input
 ${BOTAO_PESQUISAR}      css=.search-action.flat-button
@@ -38,10 +45,8 @@ Pesquisar pela palavra "${BUSCA}"
     Wait Until Element Is Visible   ${LINK_POST}
 
 Clico no menu Contato para enviar uma mensagem
-    Wait Until Element Is Visible   ${CAMPO_CONTATO}
+    Click Element   ${CAMPO_MENU}
     Click Element   ${CAMPO_CONTATO}
-    #Sleep  1s
-    #Click Element   ${CAMPO_MENU}
 
 Clicar no link da postagem
     Click Element    ${LINK_POST}
@@ -56,8 +61,18 @@ A tela da postagem "${TITULO_POSTAGEM}" deve ser mostrada
     Title Should Be  ${TITULO_POSTAGEM}
     Sleep   2s
 
+Eu digito um nome "${NOME_VALIDO}" valido
+    Input Text    ${CAMPO_NAME}    ${NOME_VALIDO}
 #### E
+Digito um email "${EMAIL_VALIDO}" valido
+    Input Text    ${CAMPO_EMAIL}    ${EMAIL_VALIDO}
+
+Digito um assunto "${ASSUNTO_VALIDO}" valido
+    Input Text    ${CAMPO_ASSUNTO}  ${ASSUNTO_VALIDO}
+
+Digito uma mensagem "${MENSAGEM_VALIDO}" valido
+    Input Text    ${CAMPO_MENSAGEM}  ${MENSAGEM_VALIDO}
 
 #### TEARDOWN
-#Fechar Navegador
-#    Close Browser
+Fechar Navegador
+    Close Browser
