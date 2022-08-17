@@ -1,135 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.8.0 on win32)" generated="20220815 01:18:26.584" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.8.0 on win32)" generated="20220816 20:58:16.593" rpa="false" schemaversion="3">
 <suite id="s1" name="TestCasesBDD2Easy" source="C:\Users\FABRICIO\Documents\2EasyEvents-Robot\testeBDD\TestCasesBDD2Easy.robot">
-<test id="s1-t1" name="Cenário 01: Mandar um formulario no Site 2EasyEvents" line="12">
-<kw name="Dado que esteja na tela Home site 2EasyEvents" library="BDDpt-br" sourcename="Dado ${keyword}">
+<test id="s1-t1" name="Cenário 02: Criar sala na GamersClub" line="21">
+<kw name="Dado que esteja na tela Home site GamersClub" library="BDDpt-br" sourcename="Dado ${keyword}">
 <kw name="Run Keyword" library="BuiltIn">
 <arg>${keyword}</arg>
 <doc>Executes the given keyword with the given arguments.</doc>
-<kw name="Que esteja na tela Home site 2EasyEvents" library="ResourceBDD">
+<kw name="Que esteja na tela Home site GamersClub" library="ResourceBDD">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>${URL1}</arg>
+<arg>${URLGC}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220815 01:18:26.712" level="INFO">Opening browser 'chrome' to base url 'https://easyevents-v2.herokuapp.com/'.</msg>
-<status status="PASS" starttime="20220815 01:18:26.712" endtime="20220815 01:18:29.049"/>
+<msg timestamp="20220816 20:58:16.723" level="INFO">Opening browser 'chrome' to base url 'https://gamersclub.com.br/'.</msg>
+<status status="PASS" starttime="20220816 20:58:16.723" endtime="20220816 20:58:20.042"/>
 </kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${CABEÇALHO1}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220815 01:18:29.049" endtime="20220815 01:18:29.061"/>
+<status status="PASS" starttime="20220816 20:58:16.723" endtime="20220816 20:58:20.042"/>
 </kw>
-<status status="PASS" starttime="20220815 01:18:26.712" endtime="20220815 01:18:29.061"/>
+<status status="PASS" starttime="20220816 20:58:16.723" endtime="20220816 20:58:20.042"/>
 </kw>
-<status status="PASS" starttime="20220815 01:18:26.712" endtime="20220815 01:18:29.061"/>
+<status status="PASS" starttime="20220816 20:58:16.723" endtime="20220816 20:58:20.042"/>
 </kw>
-<status status="PASS" starttime="20220815 01:18:26.712" endtime="20220815 01:18:29.061"/>
-</kw>
-<kw name="Quando clico no menu contato para enviar uma mensagem" library="BDDpt-br" sourcename="Quando ${keyword}">
-<kw name="Run Keyword" library="BuiltIn">
-<arg>${keyword}</arg>
-<doc>Executes the given keyword with the given arguments.</doc>
-<kw name="Clico no menu Contato para enviar uma mensagem" library="ResourceBDD">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${CAMPO_MENU}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220815 01:18:29.062" level="INFO">Clicking element 'xpath=./html/body/nav/div/button'.</msg>
-<status status="PASS" starttime="20220815 01:18:29.062" endtime="20220815 01:18:29.082"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${CAMPO_CONTATO}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220815 01:18:29.082" level="INFO">Clicking element 'xpath=./html/body/nav/div/div/ul[1]/li[3]/a'.</msg>
-<status status="PASS" starttime="20220815 01:18:29.082" endtime="20220815 01:18:29.103"/>
-</kw>
-<status status="PASS" starttime="20220815 01:18:29.062" endtime="20220815 01:18:29.103"/>
-</kw>
-<status status="PASS" starttime="20220815 01:18:29.062" endtime="20220815 01:18:29.103"/>
-</kw>
-<status status="PASS" starttime="20220815 01:18:29.062" endtime="20220815 01:18:29.103"/>
-</kw>
-<kw name="Então eu digito um nome &quot;Fabricio Oliveira&quot; valido" library="BDDpt-br" sourcename="Então ${keyword}">
-<kw name="Run Keyword" library="BuiltIn">
-<arg>${keyword}</arg>
-<doc>Executes the given keyword with the given arguments.</doc>
-<kw name="eu digito um nome &quot;Fabricio Oliveira&quot; valido" library="ResourceBDD" sourcename="Eu digito um nome &quot;${NOME_VALIDO}&quot; valido">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${CAMPO_NAME}</arg>
-<arg>${NOME_VALIDO}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220815 01:18:29.104" level="INFO">Typing text 'Fabricio Oliveira' into text field 'id=id_nome'.</msg>
-<status status="PASS" starttime="20220815 01:18:29.104" endtime="20220815 01:18:29.148"/>
-</kw>
-<status status="PASS" starttime="20220815 01:18:29.104" endtime="20220815 01:18:29.148"/>
-</kw>
-<status status="PASS" starttime="20220815 01:18:29.104" endtime="20220815 01:18:29.148"/>
-</kw>
-<status status="PASS" starttime="20220815 01:18:29.104" endtime="20220815 01:18:29.148"/>
-</kw>
-<kw name="E digito um email &quot;fabricioaaugusto@gmail.com&quot; valido" library="BDDpt-br" sourcename="E ${keyword}">
-<kw name="Run Keyword" library="BuiltIn">
-<arg>${keyword}</arg>
-<doc>Executes the given keyword with the given arguments.</doc>
-<kw name="digito um email &quot;fabricioaaugusto@gmail.com&quot; valido" library="ResourceBDD" sourcename="Digito um email &quot;${EMAIL_VALIDO}&quot; valido">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${CAMPO_EMAIL}</arg>
-<arg>${EMAIL_VALIDO}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220815 01:18:29.149" level="INFO">Typing text 'fabricioaaugusto@gmail.com' into text field 'id=id_email'.</msg>
-<status status="PASS" starttime="20220815 01:18:29.149" endtime="20220815 01:18:29.190"/>
-</kw>
-<status status="PASS" starttime="20220815 01:18:29.149" endtime="20220815 01:18:29.190"/>
-</kw>
-<status status="PASS" starttime="20220815 01:18:29.149" endtime="20220815 01:18:29.190"/>
-</kw>
-<status status="PASS" starttime="20220815 01:18:29.149" endtime="20220815 01:18:29.190"/>
-</kw>
-<kw name="E digito um assunto &quot;Teste&quot; valido" library="BDDpt-br" sourcename="E ${keyword}">
-<kw name="Run Keyword" library="BuiltIn">
-<arg>${keyword}</arg>
-<doc>Executes the given keyword with the given arguments.</doc>
-<kw name="digito um assunto &quot;Teste&quot; valido" library="ResourceBDD" sourcename="Digito um assunto &quot;${ASSUNTO_VALIDO}&quot; valido">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${CAMPO_ASSUNTO}</arg>
-<arg>${ASSUNTO_VALIDO}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220815 01:18:29.191" level="INFO">Typing text 'Teste' into text field 'id=id_assunto'.</msg>
-<status status="PASS" starttime="20220815 01:18:29.191" endtime="20220815 01:18:29.226"/>
-</kw>
-<status status="PASS" starttime="20220815 01:18:29.191" endtime="20220815 01:18:29.226"/>
-</kw>
-<status status="PASS" starttime="20220815 01:18:29.191" endtime="20220815 01:18:29.226"/>
-</kw>
-<status status="PASS" starttime="20220815 01:18:29.190" endtime="20220815 01:18:29.226"/>
-</kw>
-<kw name="E digito uma mensagem &quot;Testando o assunto do formulario&quot; valido" library="BDDpt-br" sourcename="E ${keyword}">
-<kw name="Run Keyword" library="BuiltIn">
-<arg>${keyword}</arg>
-<doc>Executes the given keyword with the given arguments.</doc>
-<kw name="digito uma mensagem &quot;Testando o assunto do formulario&quot; valido" library="ResourceBDD" sourcename="Digito uma mensagem &quot;${MENSAGEM_VALIDO}&quot; valido">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${CAMPO_MENSAGEM}</arg>
-<arg>${MENSAGEM_VALIDO}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220815 01:18:29.227" level="INFO">Typing text 'Testando o assunto do formulario' into text field 'id=id_mensagem'.</msg>
-<status status="PASS" starttime="20220815 01:18:29.227" endtime="20220815 01:18:29.268"/>
-</kw>
-<status status="PASS" starttime="20220815 01:18:29.227" endtime="20220815 01:18:29.268"/>
-</kw>
-<status status="PASS" starttime="20220815 01:18:29.227" endtime="20220815 01:18:29.268"/>
-</kw>
-<status status="PASS" starttime="20220815 01:18:29.227" endtime="20220815 01:18:29.269"/>
-</kw>
-<status status="PASS" starttime="20220815 01:18:26.711" endtime="20220815 01:18:29.269"/>
+<status status="PASS" starttime="20220816 20:58:16.722" endtime="20220816 20:58:20.042"/>
 </test>
 <kw name="Fechar Navegador" library="ResourceBDD" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220815 01:18:29.270" endtime="20220815 01:18:31.314"/>
+<status status="PASS" starttime="20220816 20:58:20.043" endtime="20220816 20:58:22.103"/>
 </kw>
-<status status="PASS" starttime="20220815 01:18:29.269" endtime="20220815 01:18:31.314"/>
+<status status="PASS" starttime="20220816 20:58:20.043" endtime="20220816 20:58:22.103"/>
 </kw>
-<status status="PASS" starttime="20220815 01:18:26.585" endtime="20220815 01:18:31.314"/>
+<status status="PASS" starttime="20220816 20:58:16.594" endtime="20220816 20:58:22.103"/>
 </suite>
 <statistics>
 <total>

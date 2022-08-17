@@ -5,6 +5,7 @@ Library     SeleniumLibrary
 ${BROWSER}              chrome
 ${URL}                  https://robotizandotestes.blogspot.com.br/
 ${URL1}                 https://easyevents-v2.herokuapp.com/
+${URLGC}                https://gamersclub.com.br/
 ${CABEÇALHO}            id=Header1
 ${CABEÇALHO1}           xpath=./html/body/nav/div/button
 
@@ -15,6 +16,8 @@ ${CAMPO_NAME}           id=id_nome
 ${CAMPO_EMAIL}          id=id_email
 ${CAMPO_ASSUNTO}        id=id_assunto
 ${CAMPO_MENSAGEM}       id=id_mensagem
+${ENVIAR_FORMULARIO}    xpath=./html/body/section[3]/div[2]/div/div/form/div/div/button
+
 
 ${BOTAO_LUPA}           css=.search-expand.touch-icon-button
 ${CAMPO_PESQUISAR}      css=.search-input>input
@@ -35,6 +38,9 @@ Que esteja na tela de resultado da pesquisa pela postagem "${TITULO_POSTAGEM}"
 Que esteja na tela Home site 2EasyEvents
     Open Browser   ${URL1}  ${BROWSER}
     Wait Until Element Is Visible   ${CABEÇALHO1}
+
+Que esteja na tela Home site GamersClub
+    Open Browser   ${URLGC}  ${BROWSER}
 
 #### QUANDO
 Pesquisar pela palavra "${BUSCA}"
@@ -66,13 +72,15 @@ Eu digito um nome "${NOME_VALIDO}" valido
 #### E
 Digito um email "${EMAIL_VALIDO}" valido
     Input Text    ${CAMPO_EMAIL}    ${EMAIL_VALIDO}
-
+    Sleep   1s
 Digito um assunto "${ASSUNTO_VALIDO}" valido
     Input Text    ${CAMPO_ASSUNTO}  ${ASSUNTO_VALIDO}
-
+    Sleep   1s
 Digito uma mensagem "${MENSAGEM_VALIDO}" valido
     Input Text    ${CAMPO_MENSAGEM}  ${MENSAGEM_VALIDO}
-
+    Sleep   2s
+clico em enviar o formulario
+    Click Element    ${ENVIAR_FORMULARIO}
 #### TEARDOWN
 Fechar Navegador
     Close Browser
